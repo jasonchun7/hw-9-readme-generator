@@ -23,7 +23,7 @@ const questions = [
     type: "input",
     name: "description",
     message:
-      "Enter a description of your page explaining the what, why, and how.",
+      "Enter a description of your application explaining the what, why, and how.",
     validate: function (answer) {
       return answer
         ? true
@@ -54,13 +54,13 @@ const questions = [
   {
     type: "list",
     name: "license",
-    message: "What license did you use for this project?",
+    message: "What license do you want to use for this project?",
     choices: [
-      "Mozilla Public License 2.0",
-      "Apache License 2.0",
-      "MIT License",
-      "Boost Software License 1.0",
-      "The Unlicense",
+      "Mozilla Public 2.0",
+      "Apache 2.0",
+      "MIT",
+      "BSD 3-Clause",
+      "GNU GPLv3.0",
     ],
   },
   // contributing section
@@ -86,7 +86,6 @@ const questions = [
         ? true
         : "A valid GitHub username is required before proceeding.";
     },
-    // research how to get link from username (api?)
   },
 //   {
 //     type: "input",

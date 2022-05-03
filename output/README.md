@@ -1,5 +1,7 @@
 # **a**
 
+  undefined
+
   ## Description 
   
   a
@@ -25,24 +27,24 @@
   
   ## License 
   
-  Mozilla Public License 2.0
+  Lincensed under the Mozilla Public 2.0 License. 
   
-  ## Contributing 
+  ## Contributors 
   
   a
   
   ## Tests 
   
   a
-  
-  ## Github
-
-  ![Image of me](https://avatars.githubusercontent.com/u/96079736?v=4)
-  - Jason Chun
-  - [GitHub Profile](https://github.com/jasonchun7)
-  - null
 
   ## Questions 
 
-  - How to reach me: email
+  My GitHub Info:
+
+  ![Image of me](https://avatars.githubusercontent.com/u/829926?v=4)
+  - Trey Eckels
+  - [GitHub Profile](https://github.com/treyeckels)
+  - null
+
+  How to reach me: a
   
