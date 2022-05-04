@@ -1,50 +1,55 @@
-# **a**
+# **README Generator**
 
-  undefined
+  
+  ![badge](https://img.shields.io/badge/license-mit-blue)
+    
 
   ## Description 
   
-  a
+  Creating a README all from the command line!
 
   ## Table of Contents
 
-  - [Description](#Description)
-  - [Installation](#Installation)
-  - [Usage](#Usage)
-  - [Licence](#Licence)
-  - [Contributors](#Contributors)
-  - [Test](#Test)
-  - [Repository Link](#Repository)
-  - [GitHub Info](#GitHub) 
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Licence](#licence)
+  - [Contributors](#contributors)
+  - [Test](#test)
+  - [Questions](#questions)
 
   ## Installation 
   
-  a
+  Fork or clone from Github Repo
 
   ## Usage 
   
-  a
+  Open terminal and install inquirer and axios modules before you start. then, start node
   
-  ## License 
-  
-  Lincensed under the Mozilla Public 2.0 License. 
-  
+  ## License
+
+  The application is covered under the following license:
+    
+    (https://choosealicense.com/licenses/mit)
+      
+
   ## Contributors 
   
-  a
+  Anything!!
   
   ## Tests 
   
-  a
+  There were none.
 
   ## Questions 
 
   My GitHub Info:
 
-  ![Image of me](https://avatars.githubusercontent.com/u/829926?v=4)
-  - Trey Eckels
-  - [GitHub Profile](https://github.com/treyeckels)
-  - null
+  ![Image of me](https://avatars.githubusercontent.com/u/96079736?v=4)
 
-  How to reach me: a
+  [GitHub Profile](https://github.com/jasonchun7)
+  
+  [Email: jchun711@gmail.com](mailto:jchun711@gmail.com)
+  
+  How to reach me: Via Email please!
   

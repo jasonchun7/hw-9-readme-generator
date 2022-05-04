@@ -55,13 +55,7 @@ const questions = [
     type: "list",
     name: "license",
     message: "What license do you want to use for this project?",
-    choices: [
-      "Mozilla Public 2.0",
-      "Apache 2.0",
-      "MIT",
-      "BSD 3-Clause",
-      "GNU GPLv3.0",
-    ],
+    choices: ["agpl", "apache", "mit", "mpl", "no license"],
   },
   // contributing section
   {
@@ -79,7 +73,7 @@ const questions = [
   // questions section
   {
     type: "input",
-    name: "github",
+    name: "username",
     message: "What is your GitHub username?",
     validate: function (answer) {
       return answer
@@ -87,14 +81,14 @@ const questions = [
         : "A valid GitHub username is required before proceeding.";
     },
   },
-//   {
-//     type: "input",
-//     name: "email",
-//     message: "What is your email?",
-//     validate: function (answer) {
-//       return answer ? true : "Please include your email.";
-//     },
-//   },
+  {
+    type: "input",
+    name: "email",
+    message: "What is your email?",
+    validate: function (answer) {
+      return answer ? true : "Please include your email.";
+    },
+  },
   {
     type: "input",
     name: "questions",
@@ -102,49 +96,32 @@ const questions = [
   },
 ];
 
-// function to write README file
-// function writeToFile(fileName, data) {
-//   fs.writeFile(fileName, data, (err) =>
-//     err ? console.error(err) : console.log(success)
-//   );
-// }
-
-inquirer
-.prompt(questions)
-.then(function (data) {
-  const queryUrl = `https://api.github.com/users/${data.github}`;
+// inquirer prompt
+inquirer.prompt(questions).then(function (data) {
+  const queryUrl = `https://api.github.com/users/${data.username}`;
 
   axios.get(queryUrl).then(function (response) {
     const githubInfo = {
       githubImage: response.data.avatar_url,
-      email: response.data.email,
       profile: response.data.html_url,
-      name: response.data.name
     };
 
-    fs.writeFile("./output/README.md", generateMarkdown(data, githubInfo), function (err) {
-      if (err) {
-        throw err;
-      }
+    // create README
+    fs.writeFile(
+      "./output/README.md",
+      generateMarkdown(data, githubInfo),
+      function (err) {
+        if (err) {
+          throw err;
+        }
 
-      console.log("New README file created with success!");
-    });
+        console.log("New README file successfully created!");
+      }
+    );
   });
 });
 
-// function to initialize app
-// const init = async () => {
-//   try {
-//     const data = await inquirer.prompt(questions);
-//     writeToFile("./output/README.md", generateMarkdown(data));
-//   } catch (err) {
-//     console.log(err);
-//   }
-// };
-
-function init() {
-
-}
+function init() {}
 
 // function to call initalize app
 init();
